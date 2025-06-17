@@ -43,7 +43,7 @@ To run this notebook:
 
 ## View the Notebook
 
-- [Rendered view via nbviewer](https://nbviewer.org/) *(link to your notebook once uploaded)*
+- [Rendered view via nbviewer](https://nbviewer.org/github/bpgodsil/sql-chinook-project/blob/main/ChinookSQLProject.ipynb) 
 
 ---
 
