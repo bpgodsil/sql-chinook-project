@@ -7568,14 +7568,16 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># create connection</span>
-<span class="n">user</span> <span class="o">=</span> <span class="s2">"root"</span>
-<span class="n">password</span> <span class="o">=</span> <span class="s2">"UXo3qvQ3M49n1vgkOLYW"</span>
+<span class="n">user</span> <span class="o">=</span> <span class="s2">"&lt;your username&gt;"</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s2">"&lt;your password&gt;"</span>
 <span class="n">host</span> <span class="o">=</span> <span class="s2">"localhost"</span>
 <span class="n">port</span> <span class="o">=</span> <span class="mi">3306</span>
 <span class="n">database</span> <span class="o">=</span> <span class="s2">"chinook"</span>
 
 <span class="c1"># Create the SQLAlchemy engine</span>
 <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="sa">f</span><span class="s2">"mysql+pymysql://</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">database</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># To run locally, replace the username/password with your own MySQL or SQLite setup. This repo uses placeholder data for demonstration purposes.</span>
 </pre></div>
 </div>
 </div>
