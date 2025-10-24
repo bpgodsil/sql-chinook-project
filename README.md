@@ -1,18 +1,18 @@
 # Chinook Music Store SQL Project
 
-This project explores customer music genre preferences using the Chinook database, a fictional dataset of digital music sales. The goal is to demonstrate intermediate SQL skills, exploratory analysis, and communication of data insights.
+This project explores customer music genre preferences using the Chinook database, a fictional dataset of digital music sales. The goal is to demonstrate SQL skills, exploratory analysis, and communication of data insights.
 
 ## Project Structure
 
-- `ChinookSQLProject.ipynb` - the Jupyter notebook containing the SQL analysis and visualizations
-- `ChinookSQLProject.html` - an HTML version of the Jupyter notebook that shows the content without needing to implement the code
-- `input/` - contain a `.png` image used in the notebook
+- `notebooks/ChinookSQLProject.ipynb` - the Jupyter notebook containing the SQL analysis and visualizations
+- `docs/ChinookSQLProject.html` - an HTML version of the Jupyter notebook that shows the content without needing to implement the code
+- `input/` - contains a `.png` image used in the notebook
 - `README.md` - this file
 
 ## Summary of Analysis
 
-- Rock is the most popular genre globally, suggesting strong universal appeal.
-- Country-specific preferences** were also found, suggesting the potential for localized marketing strategies.
+- Rock appears as the most popular genre in the sample data, suggesting broad appeal.
+- Country-specific preferences were also found, suggesting the potential for localized marketing strategies.
 
 *Note: This is a technical exercise using a small, fictional dataset and is not intended to reflect real-world music trends.*
 
@@ -22,34 +22,45 @@ To run this notebook:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/chinook-sql-project.git
+   git clone https://github.com/bpgodsil/chinook-sql-project.git
    cd chinook-sql-project
-2. Set up a local MySQL server and import the Chinook database (available [here](https://github.com/lerocha/chinook-database))
+   ```
 
-3. Update the database connection string directly in the notebook
+2. Ensure the Chinook SQLite database is available
+   The notebook expects a file named Chinook_Sqlite.sqlite in the data/ directory.
+   You can download it from the [Chinook Database repository](https://github.com/lerocha/chinook-database)
+
+3. Verify the database connection
+   The notebook assumes it is run from within the notebooks/ folder so that relative paths resolve correctly.
     ```python
-    user = "your_username"
-    password = "your_password"
-    host = "localhost"
-    port = 3306
-    database = "chinook"
+    from pathlib import Path
+    from sqlalchemy import create_engine
 
-    # Create the SQLAlchemy engine
-    engine = create_engine(f"mysql+pymysql://{user}:{password}@{host}:{port}/{database}")
+    repo_root = Path().resolve().parent
+    DB_PATH = repo_root / "data" / "Chinook_Sqlite.sqlite"
+
+    engine = create_engine(f"sqlite:///{DB_PATH}")
+   ```
+
 4. Install dependencies:
     ```bash
     pip install -r requirements.txt
-5. Launch Jupyter Lab or Notebook and open ChinookSQLProject.ipynb.ipynb.
+   ```
+
+5. Launch Jupyter Lab or Notebook and open ChinookSQLProject.ipynb
+   ```bash
+   jupyter lab
+   ```
 
 ## View the Notebook
 
-- [Rendered view via nbviewer](https://nbviewer.org/github/bpgodsil/sql-chinook-project/blob/main/ChinookSQLProject.ipynb) 
+- [Rendered view via nbviewer](https://nbviewer.org/github/bpgodsil/sql-chinook-project/blob/main/notebooks/ChinookSQLProject.ipynb) 
 
 ---
 
 ## Tools Used
 
-- SQL (MySQL)
+- SQL (SQLite)
 - Python:
   - Pandas
   - Numpy
@@ -63,6 +74,6 @@ To run this notebook:
 
 This project was completed as a portfolio piece to demonstrate:
 
-- SQL proficiency with joins, grouping, and aggregation  
+- SQL proficiency with joins, grouping, aggregation, and CTEs  
 - Integration of SQL with Python  
 - Data visualization and communication of business insights
