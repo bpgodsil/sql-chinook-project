@@ -3,15 +3,10 @@
 Preprocessing script for Chinook music sales analysis.
 
 This script:
-1. Creates a clean `genre_music` view excluding non-music/TV genres.
-2. Creates a `track_music` view filtered to valid genres.
-3. Creates an `invoiceline_music` view filtered to valid tracks.
+Creates a clean `genre_music` view excluding non-music/TV genres.
+Creates a `track_music` view filtered to valid genres.
+Creates an `invoiceline_music` view filtered to valid tracks.
 
-Usage:
-    from sqlalchemy import create_engine
-    engine = create_engine("sqlite:///path/to/chinook.db")
-    import data_prep
-    data_prep.prepare_music_views(engine)
 """
 
 from sqlalchemy import text
