@@ -8193,17 +8193,24 @@ Queries use a CTE to calculate total_global_revenue followed by filtering for th
 </div>
 </div>
 </div>
-</div>## Summary Insights
-
-- Similar the genres of the top-selling artists, Rock and Metal are among strongest-selling genres globally.
-- Latin and Alternative &amp; Punk also show strong sales suggesting these genres might be supported by a broader base of smaller artists.
-
----
-    
-## 3) Examine the monthly time course of global sales.
-
-This query calculates total global revenue by month and year, based on the modified `invoiceline_music` table.   
-We join invoices with line-level items, compute total revenue as `UnitPrice * Quantity`, and round the result for presentation.<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b6c3bb6b-208b-41bc-944e-31294ee17d61">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=73a5a32b-b886-4076-b87c-3e7539c6c162">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Summary-Insights">Summary Insights<a class="anchor-link" href="#Summary-Insights">¶</a></h2><ul>
+<li>Similar the genres of the top-selling artists, Rock and Metal are among strongest-selling genres globally.</li>
+<li>Latin and Alternative &amp; Punk also show strong sales suggesting these genres might be supported by a broader base of smaller artists.</li>
+</ul>
+<hr/>
+<h2 id="3)-Examine-the-monthly-time-course-of-global-sales.">3) Examine the monthly time course of global sales.<a class="anchor-link" href="#3)-Examine-the-monthly-time-course-of-global-sales.">¶</a></h2><p>This query calculates total global revenue by month and year, based on the modified <code>invoiceline_music</code> table.<br/>
+We join invoices with line-level items, compute total revenue as <code>UnitPrice * Quantity</code>, and round the result for presentation.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b6c3bb6b-208b-41bc-944e-31294ee17d61">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
