@@ -69,7 +69,6 @@ To run this notebook:
 - SQL (SQLite)
 - Python:
   - Pandas
-  - Numpy
   - SQLAlchemy
   - Matplotlib / Seaborn
 - Jupyter Notebook
@@ -78,8 +77,8 @@ To run this notebook:
 
 ## Purpose
 
-This project was completed as a portfolio piece to demonstrate:
-
-- SQL proficiency with joins, grouping, aggregation, and CTEs  
-- Integration of SQL with Python  
-- Data visualization and communication of business insights
+This project was created as a portfolio piece to demonstrate practical SQL skills and analytical thinking.  
+It highlights:
+- Advanced use of SQL for multi-table joins, grouping, aggregation, CTEs, and window functions  
+- Integration of SQL queries within a Python workflow for exploratory and statistical analysis  
+- Clear visualization and communication of key business insights, such as revenue distribution and market patterns
