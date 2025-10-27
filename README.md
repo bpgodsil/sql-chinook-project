@@ -1,6 +1,12 @@
-# Chinook Music Store SQL Project
+# Project: Global Music Sales Analysis (SQL / SQLite)
 
-This project explores customer music genre preferences using the Chinook database, a fictional dataset of digital music sales. The goal is to demonstrate SQL skills, exploratory analysis, and communication of data insights.
+This project explores sales patterns in the Chinook database. Using window functions, CTEs, and aggregate logic, I identify top artists, genres, and countries by revenue, calculate global contribution shares, and track revenue trends over time.
+
+**Techniques:** CTEs, window functions (ROW_NUMBER, DENSE_RANK), derived tables, aggregate functions, date extraction, cross joins for share-of-total.
+
+**Database:** SQLite
+
+**Visualization:** Seaborn and Matplotlib
 
 ## Project Structure
 
